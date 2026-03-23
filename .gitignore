@@ -1,0 +1,10 @@
+# Secrets
+project-2-money-tracker/money-tracker-api/serviceaccountkey.json
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+project-2-money-tracker/money-tracker-api/node_modules/
+project-2-money-tracker/money-tracker/vendor/
