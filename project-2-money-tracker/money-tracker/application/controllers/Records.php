@@ -11,7 +11,16 @@ class Records extends CI_Controller {
     }
 
     public function index() {
-        $data['records'] = $this->record_model->getAllRecords();
+        $keyword = trim($this->input->post('search'));
+
+        if ($keyword !== '') {
+            $data['records'] = $this->record_model->searchRecords($keyword);
+            $data['search'] = $keyword;
+        } else {
+            $data['records'] = $this->record_model->getAllRecords();
+            $data['search'] = '';
+        }
+
         $this->load->view('my_records', $data);
     }
 
